@@ -32,13 +32,13 @@ int main(int argc, char *argv[]) {
 		scanf("%d",&input);
 		switch(input)
 		{
-			case 1:AddContact(&con);break;
-			case 2:break;
-			case 3:break;
-			case 4:break;
-			case 5:ShowContact(&con);break;
-			case 6:break;
-			case 0:printf("exit success!\n");break;
+			case ADD:AddContact(&con);break;
+			case DELETE:DelContact(&con);break;
+			case SEARCH:SearchContact(&con);break;
+			case MODIFY:ModifyContact(&con);break;
+			case SHOW:ShowContact(&con);break;
+			case SORT:SortContact(&con);break;
+			case EXIT:printf("exit success!\n");break;
 			default:printf("enter error!please try again!\n");break;
 		}
 	}while(input);
