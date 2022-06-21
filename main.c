@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Contact.h"
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/*
+
+make a contact system;
+
+1. Add    2. del 
+3. search 4. modify
+5. show   6.sort
+0.exit
+
+*/
+void menu()
+{
+	printf("*******1. Add              2. del   *******\n");
+	printf("*******3. search           4. modify*******\n");
+	printf("*******5. show             6. sort  *******\n");
+	printf("******************0. exit******************\n");
+}
+int main(int argc, char *argv[]) {
+	struct contact con;
+	//init contact:
+	InitContact(&con);
+	int input=0;
+	do 
+	{
+
+		menu();
+		printf("enter your choice:>");
+		scanf("%d",&input);
+		switch(input)
+		{
+			case 1:AddContact(&con);break;
+			case 2:break;
+			case 3:break;
+			case 4:break;
+			case 5:ShowContact(&con);break;
+			case 6:break;
+			case 0:printf("exit success!\n");break;
+			default:printf("enter error!please try again!\n");break;
+		}
+	}while(input);
+	return 0;
+}
